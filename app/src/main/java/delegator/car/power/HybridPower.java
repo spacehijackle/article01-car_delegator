@@ -82,10 +82,6 @@ public class HybridPower implements MotivePower
 		}
     }
 
-    /**
-     * @inheritDoc
-     * @apiNote アクセス修飾子を public にする必要があるの…
-     */
     @Override
     public void onModeChanged(ACMode mode)
     {

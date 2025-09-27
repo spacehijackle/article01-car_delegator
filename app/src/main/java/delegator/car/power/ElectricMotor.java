@@ -58,16 +58,12 @@ public class ElectricMotor implements MotivePower
         return delegator.injectEnergyIfPossible(increment);
     }
 
-    /**
-     * @inheritDoc
-     * @apiNote アクセス修飾子を public にする必要があるの…
-     */
     @Override
     public void onModeChanged(ACMode mode)
     {
 		var consumptionRate = switch(mode)
 		{
-			case OFF     -> 0.0d;
+			case OFF     -> initConsumptionRate;
 			case HEATING -> initConsumptionRate * 0.8d;  // ヒーターONで20%悪化
 		};
 
