@@ -57,19 +57,6 @@ final public class MotivePowerCore implements MotivePower
     }
 
     /**
-     * 容量に指定分の空きがあるか否かを返す。
-     * 
-     * @param increment 注入量（正の数）
-     * @return true: 空きあり、false: 空きなし
-     */
-    boolean hasSpace(double increment)
-    {
-        if(increment <= 0) return false;
-
-        return (remains + increment < capacity);
-    }
-
-    /**
      * 指定分のエネルギーを注入する。
      * 
      * @param increment 注入量
@@ -84,6 +71,19 @@ final public class MotivePowerCore implements MotivePower
         }
 
         return false;
+    }
+
+    /**
+     * 容量に指定分の空きがあるか否かを返す。
+     * 
+     * @param increment 注入量（正の数）
+     * @return true: 空きあり、false: 空きなし
+     */
+    private boolean hasSpace(double increment)
+    {
+        if(increment <= 0) return false;
+
+        return (remains + increment < capacity);
     }
 
     /**
