@@ -70,4 +70,14 @@ public class ElectricMotor implements MotivePower
         // 電費変更
         delegator.changeConsumptionRate(consumptionRate);
     }
+
+    @Override
+    public MotivePower clone()
+    {
+        try
+        {
+            return (MotivePower)super.clone();
+        }
+        catch(CloneNotSupportedException ex) { throw new InternalError(ex.toString()); }
+    }
 }

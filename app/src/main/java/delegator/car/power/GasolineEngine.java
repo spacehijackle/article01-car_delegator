@@ -49,4 +49,14 @@ public class GasolineEngine implements MotivePower
         // モードの変更で燃費は不変
         // ※ヒーターONでもエンジンの排熱を利用するので燃費は変わらない。
     }
+
+    @Override
+    public MotivePower clone()
+    {
+        try
+        {
+            return (MotivePower)super.clone();
+        }
+        catch(CloneNotSupportedException ex) { throw new InternalError(ex.toString()); }
+    }
 }

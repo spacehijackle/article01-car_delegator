@@ -3,7 +3,7 @@ package delegator.car;
 /**
  * 動力源のインターフェース定義
  */
-public interface MotivePower
+public interface MotivePower extends Cloneable
 {
     /** 動力源名を返す。*/
     String powerSource();
@@ -25,4 +25,7 @@ public interface MotivePower
 
     /** モード変更イベント処理 */
     void onModeChanged(ACMode mode);
+
+    /** クローンを返す。*/
+    MotivePower clone();
 }

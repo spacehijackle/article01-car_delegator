@@ -103,4 +103,7 @@ final public class MotivePowerCore implements MotivePower
      */
     @Override
     public void onModeChanged(ACMode mode) { }
+
+    @Override
+    public MotivePower clone() { return null; }
 }
