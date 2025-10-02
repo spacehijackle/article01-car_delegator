@@ -101,14 +101,4 @@ public class HybridPower implements MotivePower
 			active = tmpActive;
 		}
     }
-
-    @Override
-    public MotivePower clone()
-    {
-        try
-        {
-            return (MotivePower)super.clone();
-        }
-        catch(CloneNotSupportedException ex) { throw new InternalError(ex.toString()); }
-    }
 }

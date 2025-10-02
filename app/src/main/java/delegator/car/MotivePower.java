@@ -25,7 +25,4 @@ public interface MotivePower extends Cloneable
 
     /** モード変更イベント処理 */
     void onModeChanged(ACMode mode);
-
-    /** クローンを返す。*/
-    MotivePower clone();
 }
