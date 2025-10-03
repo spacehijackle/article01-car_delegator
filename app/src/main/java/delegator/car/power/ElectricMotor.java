@@ -50,6 +50,8 @@ public class ElectricMotor implements MotivePower
     /**
      * バッテリーに充電する。
      * 
+     * @apiNote {@code MotivePower#injectEneergyIfPossible()} のエイリアス
+     * 
      * @param increment 充電量(kWh)
      * @return true: 充電成功、false: 充電失敗
      */
